@@ -7,11 +7,17 @@ namespace CSI_340_ChenRoblesWu_Website.Models
 {
     public class InventoryModel
     {
-        public int InvnetoryId { get; set; }
+        public int Id { get; set; }
 
-        public bool InStock = true;
+        public int InventoryId { get; set; }
 
+        public int BookId { get; set; }
 
+        public int PriceId { get; set; }
+
+        public PriceModel PriceModel { get; set; }
+
+        public BookModel BookModel { get; set; }
          
     }
 }
