@@ -2,8 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <ApplicationIcon>favicon.ico</ApplicationIcon>
-    <Win32Resource />
+    <RootNamespace>CSI_340_ChenRoblesWu_Website</RootNamespace>
   </PropertyGroup>
 
 </Project>
