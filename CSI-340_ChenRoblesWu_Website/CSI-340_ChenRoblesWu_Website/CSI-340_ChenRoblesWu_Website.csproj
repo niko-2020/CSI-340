@@ -31,4 +31,12 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="SetImg\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Icons-Book.ico" />
+  </ItemGroup>
+
 </Project>
