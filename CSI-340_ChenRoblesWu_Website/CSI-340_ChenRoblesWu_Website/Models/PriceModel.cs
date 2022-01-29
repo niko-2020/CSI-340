@@ -12,7 +12,9 @@ namespace CSI_340_ChenRoblesWu_Website.Models
 
         public int PriceId { get; set; }
 
-        public ICollection<InventoryModel> Inventory { get; set; }
+        public int bookId { get; set; }
+
+        public ICollection<BookModel> BookModel { get; set; }
 
     }
 }
