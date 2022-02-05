@@ -61,7 +61,7 @@ namespace CSI_340_ChenRoblesWu_Website.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Data Source =&quot;(LocalDb)\MSSQLLocalDb&quot;; database = &quot;gravity_books&quot;;integrated security=SSPI;.
+        ///   Looks up a localized string similar to Data Source =&quot;DESKTOP-4MHOVL2&quot;; database = &quot;gravity_books&quot;;integrated security=SSPI;.
         /// </summary>
         internal static string ConnectionString {
             get {
