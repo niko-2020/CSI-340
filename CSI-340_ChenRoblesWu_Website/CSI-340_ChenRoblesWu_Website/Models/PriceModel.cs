@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,12 +8,11 @@ namespace CSI_340_ChenRoblesWu_Website.Models
 {
     public class PriceModel
     {
-        public int Id { get; set; }
-        public float Price { get; set; }
-
-        public int PriceId { get; set; }
-
-        public int bookId { get; set; }
+        
+        [Key]
+        public int book_id { get; set; }
+        public int price_id { get; set; }
+        public float price { get; set; }
 
         public ICollection<BookModel> BookModel { get; set; }
 

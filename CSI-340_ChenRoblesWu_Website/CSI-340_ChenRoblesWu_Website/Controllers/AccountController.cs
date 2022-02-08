@@ -17,7 +17,7 @@ namespace CSI_340_ChenRoblesWu_Website.Controllers
         }
         public IActionResult Info()
         {
-            var displayData = _db.Database;
+            var displayData = _db.Book.ToList();
             return View(displayData);
         }
         public IActionResult Create()
@@ -26,15 +26,15 @@ namespace CSI_340_ChenRoblesWu_Website.Controllers
         }
         [HttpPost]
 
-        public async Task<IActionResult> Create(int bookid)
+        public async Task<IActionResult> Create(int book_id)
         {
             if (ModelState.IsValid)
             {
-                _db.Add(bookid);
+                _db.Add(book_id);
                 await _db.SaveChangesAsync();
                 return RedirectToAction("ContactInfo");
             }
-            return View(bookid);
+            return View(book_id);
         }
         
     }

@@ -14,7 +14,7 @@ namespace CSI_340_ChenRoblesWu_Website.Data
         
         }
 
-        public DbSet<BookModel> BookModel { get; set; }
-        public DbSet<PriceModel> PriceModel { get; set; }
+        public DbSet<BookModel> Book { get; set; }
+        //public DbSet<PriceModel> Price { get; set; }
     }
 }
