@@ -17,24 +17,24 @@ namespace CSI_340_ChenRoblesWu_Website.Controllers
         }
         public IActionResult Info()
         {
-            var displayData = _db.Book.ToList();
-            return View(displayData);
+            var displayData = _db.customers.ToList();
+            return View("Login",displayData);
         }
-        public IActionResult Create()
+        public IActionResult Login()
         {
             return View();
         }
         [HttpPost]
 
-        public async Task<IActionResult> Create(int book_id)
+        public async Task<IActionResult> Login(int Customer_id)
         {
             if (ModelState.IsValid)
             {
-                _db.Add(book_id);
+                _db.Add(Customer_id);
                 await _db.SaveChangesAsync();
                 return RedirectToAction("ContactInfo");
             }
-            return View(book_id);
+            return View(Customer_id);
         }
         
     }
