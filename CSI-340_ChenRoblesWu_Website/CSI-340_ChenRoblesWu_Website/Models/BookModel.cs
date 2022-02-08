@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,17 +8,15 @@ namespace CSI_340_ChenRoblesWu_Website.Models
 {
     public class BookModel
     {
-        public string Id { get; set; }
-
-        public string BookId { get; set; }
+        [Key]
+        public int Book_id { get; set; }
         public string Title { get; set; }
-        public string PublisherId { get; set; }
-        public string NumPages { get; set; }
-        public string LanguageId { get; set; }
+        public int Publisher_id { get; set; }
+        public int Num_pages { get; set; }
+        public int Language_id { get; set; }
         public string isbn13 { get; set; }
-        public string Description { get; set; }
 
-        public string PublicationDate { get; set; }
+        public DateTime Publication_date { get; set; }
 
     }
 }
