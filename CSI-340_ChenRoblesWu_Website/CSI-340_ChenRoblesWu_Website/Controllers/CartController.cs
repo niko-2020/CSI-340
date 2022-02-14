@@ -10,31 +10,13 @@ namespace CSI_340_ChenRoblesWu_Website.Controllers
     public class CartController : Controller
     {
         private readonly DataContext _db;
-
         public CartController(DataContext db)
         {
             _db = db;
         }
-        public IActionResult Info()
+        /*public async Task<IActionResult> addToCart(int customer_id,int book_id,int count)
         {
-            var displayData = _db.Book.ToList();
-            return View( "ShoppingCart",displayData);
-        }
-        public IActionResult Create()
-        {
-            return View();
-        }
-        [HttpPost]
-
-        public async Task<IActionResult> Create(int book_id)
-        {
-            if (ModelState.IsValid)
-            {
-                _db.Add(book_id);
-                await _db.SaveChangesAsync();
-                return RedirectToAction("ContactInfo");
-            }
-            return View(book_id);
-        }
+            customer_id.
+        }*/
     }
 }

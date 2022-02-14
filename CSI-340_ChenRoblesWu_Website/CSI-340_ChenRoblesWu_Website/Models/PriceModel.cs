@@ -12,7 +12,7 @@ namespace CSI_340_ChenRoblesWu_Website.Models
         [Key]
         public int book_id { get; set; }
         public int price_id { get; set; }
-        public float price { get; set; }
+        public decimal price { get; set; }
 
         public ICollection<BookModel> BookModel { get; set; }
 
