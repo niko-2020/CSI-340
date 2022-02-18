@@ -31,7 +31,9 @@ namespace CSI_340_ChenRoblesWu_Website.Models
         Lines.RemoveAll(l => l.book.Book_id == book.Book_id);
         public decimal ComputeTotalValue() =>
         Lines.Sum(e => e.book.price * e.Quantity);
+
         public virtual void Clear() => Lines.Clear();
+
     } 
 
 public class CartLine
