@@ -11,10 +11,10 @@ namespace CSI_340_ChenRoblesWu_Website.Pages
     public class CartModel : PageModel
     {
         private IStoreRepository repository;
-        public CartModel(IStoreRepository repo)
+        public CartModel(IStoreRepository repo, Cart cartService)
         {
             repository = repo;
-            
+            Cart = cartService;
         }
         public Cart Cart { get; set; }
         public string ReturnUrl { get; set; }
@@ -30,6 +30,13 @@ namespace CSI_340_ChenRoblesWu_Website.Pages
             Cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
             Cart.AddItem(book, 1);
             HttpContext.Session.SetJson("cart", Cart);
+            return RedirectToPage(new { returnUrl = returnUrl });
+        }
+
+        public IActionResult OnPostRemove(long productId, string returnUrl)
+        {
+            Cart.RemoveLine(Cart.Lines.First(cl =>
+            cl.book.Book_id == productId).book);
             return RedirectToPage(new { returnUrl = returnUrl });
         }
     }
