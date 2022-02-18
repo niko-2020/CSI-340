@@ -29,7 +29,7 @@ namespace CSI_340_ChenRoblesWu_Website.Models
         public void RemoveLine(BookModel book) =>
         Lines.RemoveAll(l => l.book.Book_id == book.Book_id);
         public decimal ComputeTotalValue() =>
-        Lines.Sum(e => e.book.Book_id * e.Quantity);
+        Lines.Sum(e => e.book.price * e.Quantity);
         public void Clear() => Lines.Clear();
     } 
 
