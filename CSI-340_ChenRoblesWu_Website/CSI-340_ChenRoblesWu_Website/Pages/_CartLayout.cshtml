@@ -10,7 +10,7 @@
   <link rel="icon" href="~/book-icon-138-Windows.ico"/>
 </head>
 <body>
-    @*<!-- 
+    
         <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
@@ -21,15 +21,13 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
-                       <!-- <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        -->
+                       
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Inventory" asp-action="BrowseBooks" href="/Inventory/BrowseBooks">BOOK</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Inventory" asp-action="BrowseBooks">BOOK</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"  href="/Home/Index">Home</a>
+                        <li>
+
+                        </li>
                         <li>
 
                         </li>
@@ -41,17 +39,16 @@
                 <div class = "navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login" href="/Account/Login">Login</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
                             </li>
-                            <li class="nav-item">
-                                <a href="/Cart?returnUrl=%2FInventory%2FBrowseBooks" class="nav-link text-dark" asp-area="" asp-controller="Pages" asp-action="Cart" href="/Cart?returnUrl=%2FInventory%2FBrowseBooks">Cart</a>
-                            </li>
+                            
                     </ul>
+                   
                 </div>
             </div>
         </nav>
     </header>
-    -->*@
+   
 
  <div class="m-1 p-1">
  @RenderBody()
