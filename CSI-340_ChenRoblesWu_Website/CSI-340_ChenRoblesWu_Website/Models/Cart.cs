@@ -36,17 +36,14 @@ namespace CSI_340_ChenRoblesWu_Website.Models
 
     } 
 
-public class CartLine
+    public class CartLine
     {
         [Key]
         public int customer_id { get; set; }    
         public BookModel book { get; set; }
         public int Quantity { get; set; }
 
-        internal void RemoveLine(BookModel book)
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 
 }
