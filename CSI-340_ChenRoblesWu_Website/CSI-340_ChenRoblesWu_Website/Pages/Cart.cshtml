@@ -35,8 +35,8 @@
              @((line.Quantity *line.book.price).ToString("c"))
              </td>
              <td class="text-center">
-                 <form asp-page-handler="Remove" method="post">
-                     <input type="hidden" name="ProductID" value="@line.book.Book_id" />
+                 <form asp-page-handler="Remove"  method="post">
+                     <input type="hidden" name="productId" value="@line.book.Book_id" />
                      <input type="hidden" name="returnUrl" value="@Model.ReturnUrl" />
                      
                      <button type="submit" class="btn btn-sm btn-danger">

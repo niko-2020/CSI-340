@@ -1,10 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using CSI_340_ChenRoblesWu_Website.Infrastructure;
 using CSI_340_ChenRoblesWu_Website.Models;
 using System.Linq;
+using Microsoft.AspNetCore.Mvc.TagHelpers;
 
 namespace CSI_340_ChenRoblesWu_Website.Pages
 {
@@ -21,15 +20,15 @@ namespace CSI_340_ChenRoblesWu_Website.Pages
         public void OnGet(string returnUrl)
         {
             ReturnUrl = returnUrl ?? "/";
-            Cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
+          
         }
         public IActionResult OnPost(long productId, string returnUrl)
         {
             BookModel book = repository.Books
                 .FirstOrDefault(p => p.Book_id == productId);
-            Cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
+            
             Cart.AddItem(book, 1);
-            HttpContext.Session.SetJson("cart", Cart);
+            
             return RedirectToPage(new { returnUrl = returnUrl });
         }
 
@@ -38,6 +37,6 @@ namespace CSI_340_ChenRoblesWu_Website.Pages
             Cart.RemoveLine(Cart.Lines.First(cl =>
             cl.book.Book_id == productId).book);
             return RedirectToPage(new { returnUrl = returnUrl });
-        }
+        }        
     }
 }
